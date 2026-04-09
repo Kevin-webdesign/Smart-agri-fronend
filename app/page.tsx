@@ -22,7 +22,7 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<ImageItem | null>(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [deleting, setDeleting] = useState<number | null>(null);
-  const backendUrl = 'https://cdn.agrinnosol.com';
+  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL ;
 
   useEffect(() => {
     fetchImages();
